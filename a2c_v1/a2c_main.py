@@ -75,6 +75,7 @@ for e in range(num_episode):
             pylab.xlabel("episode")
             pylab.ylabel("average score")
             pylab.savefig("./graph.png")
+            draw_tensorboard(episode_reward, ep)
 
             # 이동 평균이 400 이상일 때 종료
             if score_avg > 400:
